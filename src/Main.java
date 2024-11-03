@@ -4,12 +4,31 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner =new Scanner(System.in);
-      final long x = scanner.nextLong();
-        final long y = scanner.nextLong();
-        System.out.println(x+y);
-        System.out.println(x*y);
-        System.out.println(x-y);
-        System.out.println((double) x/y);
+        double d;
+        double x1;
+        double x2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter three numbers");
+        int a = Integer.parseInt(scanner.nextLine());
+        int b = Integer.parseInt(scanner.nextLine());
+        int c = Integer.parseInt(scanner.nextLine());
+        d = (b * b) - (4 * a * c);
+        double corin = Math.sqrt(d);
+        if (d == 0) {
+            x1 = -b / (2 * a);
+            System.out.println(x1);
+        }
+        if (d > 0) {
+            x1 = (-b + corin) / (2 * a);
+            System.out.println(x1);
+             x2 = (-b - corin) / (2 * a);
+            System.out.println(x2);
+        }
+        if (d < 0) {
+            System.out.println("no solution");
+        }
+
     }
 }
+
+
